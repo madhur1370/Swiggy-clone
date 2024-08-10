@@ -2,10 +2,23 @@ import { useState } from "react"
 import "../styles/res-card.css"
 const Res_card=(props)=>{
     let array=props.name.info.cuisine;
+    let [color,setColor]=useState("green")
     function setstar(){
         let star=props.name.info.rating.rating_text
-        if(star!=="-")
-            return(<><p className="star" >{star}</p><img src="../../images/star.png" className="img-star"/></>)
+        if(star!=="-"){
+            star=Number(star);
+            let color="green"
+            if(star>0&&star<=1)
+                color="red"
+            else if(star>1&&star<=2)
+                color="orange"
+            else if(star>2&&star<=3)
+                color="yellow"
+            else if(star>3&&star<=4)
+                color="lightgreen"
+            return(<p className="color" style={{backgroundColor:color}}><p className="star" style={{backgroundColor:color}} >{star}</p><img  src="../../images/star.png" className="img-star"/></p>)
+
+        }
     }
     return(
         <div className="main-cont">
