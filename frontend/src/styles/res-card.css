@@ -2,7 +2,8 @@
     width: 360px;
     height: 250px;
     border-radius:10px;
-    margin:5px
+    margin:5px;
+    cursor: pointer;
 }
 
 .main-cont{
@@ -11,7 +12,7 @@
     width: 370px;
     border-radius: 10px;
 }
-.res-name{
+.res-name,.stars{
     color: black;
     text-align: left;
     font-size: medium;
@@ -25,7 +26,7 @@
 }
 
 .address,.cuisine{
-    width: 45%;
+    width: 55%;
     color: black;
     padding-left: 5px;
     font-size: 80%;
@@ -47,3 +48,55 @@
 }
 
 
+.distance{
+    color: cornflowerblue;
+    font-size: small;
+    font-weight: 800;
+    padding-right: 5px;
+}
+
+.bottom-status{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price{
+    color: black;
+    margin-right: 5px;
+}
+
+
+.second-layer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.top-layer{ 
+    width: 100%;
+    display: flex;
+    height: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.star{
+    color: white;
+    height: 120%;
+    background-color:green;
+    align-content: center;
+    width:fit-content;
+    justify-self:end;
+    margin-left: auto;
+    font-size: 70%;
+    height: 90%;
+    padding: 1px;
+}
+
+.img-star{
+    height: 70%;
+    align-self: center;
+    background-color: green;
+    margin-right: 5px;
+}
