@@ -1,0 +1,49 @@
+.res-image{
+    width: 360px;
+    height: 250px;
+    border-radius:10px;
+    margin:5px
+}
+
+.main-cont{
+    margin-top: 10px;
+    height: fit-content;
+    width: 370px;
+    border-radius: 10px;
+}
+.res-name{
+    color: black;
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+    padding-left:5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 45%;
+    padding-bottom: 4px;
+}
+
+.address,.cuisine{
+    width: 45%;
+    color: black;
+    padding-left: 5px;
+    font-size: 80%;
+    font-weight: 150;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main-cont:hover{
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3),
+              0 0 5px 5px rgba(255, 255, 255, 0.2);
+}
+
+
+.status{
+    padding:5px 0 5px 5px;
+    color: green;
+}
+
+

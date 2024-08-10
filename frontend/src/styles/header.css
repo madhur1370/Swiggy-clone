@@ -1,0 +1,85 @@
+.bar{
+    z-index: 1;
+}
+
+.bar,.bar1,.bar2,.bar3{
+    width: 100vw;
+    height:50px;
+    background-color:rgb(230, 139, 54);
+    display: flex;
+    font-size:large;
+    color: white;
+    font-weight: bolder;
+    justify-content:space-between;
+    gap:10px;
+}
+
+.bar1{
+    justify-content: left;
+    width: 280px;
+}
+.bar1>.logo{
+    height: 50px;
+    width: 50px;
+    align-self: center;
+}
+.bar2{
+    width:100%;
+    justify-content:right;
+}
+.bar2>div,.home{
+    font-size: large;
+    align-self: center;
+    margin-right:1vw;
+    cursor: pointer;
+}
+.bar2>img{
+    cursor: pointer;
+}
+
+.bar3{
+    width: 150px;
+    display: flex;
+    justify-content: right;
+
+}
+.bar3>img{
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+}
+.bar3>div{
+    padding-right: 3px;
+    width: fit-content;
+    align-content: center;
+}
+
+.logo{
+    border-radius: 50%;
+    border:2px solid white;
+    margin-right:7px;
+}
+
+.logo-text{
+    height: 100%;
+    font-size:200%;
+    font-family: cursive;
+
+}
+
+
+
+.menu{
+    width:25px;
+}
+
+@media(max-width:750px){
+    .bar2{
+        display: none;
+    }
+}
+.bar2>img{
+    height: 20px;
+    width: 20px;
+    align-self: center;
+}

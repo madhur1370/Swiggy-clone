@@ -1,0 +1,10 @@
+.main{
+    width: 75vw;
+    margin: 0 auto 0 auto;
+}
+@media(max-width:800px) {
+    .main{
+        width: 100vw;
+        margin: 0 auto 0 auto;
+    }   
+}

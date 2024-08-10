@@ -1,0 +1,21 @@
+*{
+    color: white;
+    overflow-y: scroll;
+}
+.footer{
+    position: relative;
+    width: 100vw;
+    background-color:black;
+    bottom: 0;
+    padding: 15px;
+    height: 200px;
+}
+.c2{
+    bottom: 0;
+}
+.c1{
+    height: 95%;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
