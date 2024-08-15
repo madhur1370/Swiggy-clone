@@ -10,7 +10,7 @@ const Restaurants=()=>{
                     {
                         restaurants.map((val,item)=>{
                             if(val.type=="restaurant")
-                                return(<Res_card name={val}/>)
+                                return(<Res_card key={item} name={val}/>)
                         })
                     }
                 </div>

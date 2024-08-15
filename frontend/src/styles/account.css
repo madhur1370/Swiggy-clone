@@ -1,0 +1,60 @@
+.account{
+    position: absolute;
+    right: 0;
+    top:50px;
+    height: 100vh;
+    background-color: rgb(238, 240, 243);
+    font-size: smaller;
+    color: black;
+    display: flex;
+    flex-direction: column;   
+    animation-duration:1s;
+    animation-name:s;
+    animation-fill-mode: forwards;
+}
+@keyframes s{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 470px;
+    }
+
+}
+
+.acc-label,.acc-inp{
+    width: 70%;
+    height:20px;
+    color: black;
+    margin-left: 50px;
+    font-size: larger;
+}
+
+.mid-sec{
+    margin-top: 50px;
+    display: flex;
+    gap:5px;
+    flex-direction: column;
+}
+
+.acc-inp{
+    border: 1px solid black;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+.account>button{
+    background-color:rgb(230, 139, 54);
+    align-self: center;
+    width: 40%;
+    margin-left: -5%;
+    height: 40px;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+
+.hide{
+    display: none;
+}

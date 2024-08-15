@@ -16,36 +16,36 @@ const Res_card=(props)=>{
                 color="yellow"
             else if(star>3&&star<=4)
                 color="lightgreen"
-            return(<p className="color" style={{backgroundColor:color}}><p className="star" style={{backgroundColor:color}} >{star}</p><img  src="../../images/star.png" className="img-star"/></p>)
+            return(<div className="color" style={{backgroundColor:color}}><div className="star" style={{backgroundColor:color}} >{star}</div><img  src="../../images/star.png" className="img-star"/></div>)
 
         }
     }
     return(
         <div className="main-cont">
             <img src={props.name.info.image.url} className="res-image" alt="" />
-            <p className="top-layer">
+            <div className="top-layer">
             <div className="res-name">{props.name.info.name}</div>
             {setstar()}
-            </p>
+            </div>
             <div className="address">{props.name.info.locality.name}</div>
-            <p className="second-layer">
-            <p className="cuisine" style={{textOverflow:"ellipsis"}}>{
+            <div className="second-layer">
+            <div className="cuisine" style={{textOverflow:"ellipsis"}}>{
                 array.map((val)=>{
                     return(val.name+" ")
                 })
                 }
-            </p>
-            <p className="price">
+            </div>
+            <div className="price">
                 {props.name.info.costText.text}
-            </p>
-            </p>
-            <p className="bottom-status">
+            </div>
+            </div>
+            <div className="bottom-status">
             {
-                (props.name.info.timing.text==="")?<p className="status" style={{color:"red"}}>closed</p>:<p className="status" style={{color:"green"}}>open</p>}
+                (props.name.info.timing.text==="")?<div className="status" style={{color:"red"}}>closed</div>:<div className="status" style={{color:"green"}}>open</div>}
             {
-                <p className="distance" >{props.name.distance}</p>
+                <div className="distance" >{props.name.distance}</div>
             }
-            </p>
+            </div>
             
         </div>
     )

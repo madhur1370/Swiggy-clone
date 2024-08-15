@@ -83,3 +83,15 @@
     width: 20px;
     align-self: center;
 }
+
+.name{
+    cursor: pointer;
+}
+
+.login{
+    background-color: black;
+    height: 100%;
+}
+.cart{
+    align-self: center;
+}

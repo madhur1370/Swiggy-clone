@@ -5,17 +5,58 @@
 .footer{
     position: relative;
     width: 100vw;
-    background-color:black;
     bottom: 0;
+    background-color: black;
     padding: 15px;
     height: 200px;
-}
-.c2{
-    bottom: 0;
+    display: flex;
 }
 .c1{
-    height: 95%;
+    font-size: x-larger;
+    margin-left: 5%;
+    height: 100%;
+    padding-left: 50px;
+    /* background-color: aqua; */
 }
-::-webkit-scrollbar{
-    width: 0;
+
+.c1>p{
+    font-size: medium;
+    color: rgb(174, 178, 182);
 }
+.flag-img{
+    width: 25px;
+    height: 20px;
+}
+
+.logo-pos{
+    height: 100%;
+    display: flex;
+}
+
+.logo-img{
+    align-self: center;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.logo-pos>p{
+    align-self: center;
+    margin: 10px;
+    font-size:300%;
+    font-weight:bolder;
+    text-decoration: underline;
+}
+
+
+.imp-link{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;position: absolute;
+    height: 50%;
+    align-items: flex-end;
+
+}
+.a{
+    width: 50px;
+}
+
