@@ -1,9 +1,10 @@
 .account{
-    position: absolute;
-    right: 0;
-    top:50px;
-    height: 100vh;
-    background-color: rgb(238, 240, 243);
+    margin-right: auto;
+    margin-left: auto;
+    height:100vh;
+    min-height: 500px;
+    box-shadow: 0 0 5px rgb(214, 209, 209),
+                0 0 5px rgb(180, 176, 176);
     font-size: smaller;
     color: black;
     display: flex;
@@ -49,12 +50,19 @@
     width: 40%;
     margin-left: -5%;
     height: 40px;
+    margin-top: 5px;
     font-size: large;
     font-weight: bolder;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 
 .hide{
     display: none;
+}
+
+
+.head{
+    height: fit-content;
 }

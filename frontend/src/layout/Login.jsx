@@ -1,8 +1,8 @@
+import Account from "../component/account";
+
 function Login(){
     return(
-        <h1>
-        Login
-        </h1>
+        <Account></Account>
     );
 }
 

@@ -1,6 +1,5 @@
 import Header  from "../component/Header.jsx";
 import Footer from "../component/Footer.jsx"
-import Account from "../component/account.jsx";
 import List from "../component/List.jsx";
 import "../styles/home.css"
 import Restaurants from "../component/restaurants.jsx";
@@ -10,7 +9,6 @@ function Home(){
         <Logincontextprovider>
         <div>
             <Header></Header>
-            <Account/>
             <div className="main">
             <List></List>
             <Restaurants/>

@@ -1,12 +1,35 @@
-import { useContext } from "react";
+import {useEffect, useState } from "react";
 import "../styles/account.css"
-import LoginContext from "../context/context";
 const Account=()=>{
-    const {islogin} =useContext(LoginContext)
-    if(islogin){
+    const [loginClicked,setLoginClicked]=useState(false)
+    useEffect((e)=>{
+        if(loginClicked)
+        {
+            console.log("clicked");
+            const content={
+                username:"madhur",
+                password:"madhir12344#"
+            } 
+            const obj={
+                method:'POST',
+                header:{'Content-Type':'text/plain'},
+                body:JSON.stringify(content)
+            }
+            fetch("http://127.0.0.1:4545",obj)
+            .then((res)=>res.json())
+            .then((data)=>{
+                console.log(data);
+            })
+            .catch((e)=>{
+                console.log(e);
+            })
+            setLoginClicked(!loginClicked)
+        }
+        
+    },[loginClicked]);
     return(<div className="account">
         <div className="head">
-            <p style={{color:'black'}}>Login</p>
+            <p  style={{color:'black'}}>Login</p>
             or <div style={{color:'blue'}} >create account</div>
         </div>
         <div   className="mid-sec">
@@ -17,8 +40,7 @@ const Account=()=>{
         <label className="acc-label" htmlFor="email">email</label>
         <input className="acc-inp" type="text" name="email" required/>
         </div>
-        <button >login</button>
+        <button onClick={()=>setLoginClicked(!loginClicked)}>login</button>
     </div>);
-    }
 }
 export default Account;
