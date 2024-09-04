@@ -1,6 +1,6 @@
 import {useEffect, useState } from "react";
-import "../styles/account.css"
-const Account=()=>{
+import "../../src/styles/account.css"
+const Seller_login=()=>{
     const [loginClicked,setLoginClicked]=useState(false)
     useEffect((e)=>{
         if(loginClicked)
@@ -16,7 +16,7 @@ const Account=()=>{
                 "username":username,
                 "password":password,
             } 
-            let reqtype="/Login";
+            let reqtype="/seller_Login";
             if(switchlogin_create)
             {
                 let email=document.querySelector(".email").value;
@@ -28,7 +28,7 @@ const Account=()=>{
                 }
                 content["email"]=email;
                 content["phone"]=phone;
-                reqtype="/create-account"
+                reqtype="/seller_create"
             }
             const obj={
                 method:'POST',
@@ -77,12 +77,13 @@ const Account=()=>{
         <input className="acc-inp password" type="password" name="password"></input>
         {(switchlogin_create)?<div style={{display:"flex", flexDirection:"column"}}>
         <label className="acc-label" htmlFor="phone">phone</label>
-        <input className="acc-inp phone" type="number" name="phone" maxLength={10} minLength={10} required/>
+        <input className="acc-inp phone" type="number" name="phone" maxLength={10} minLength={10} min={0}  required/>
         <label className="acc-label" htmlFor="email">email</label>
-        <input className="acc-inp email" type="email" name="email" required/></div>:""
+        <input className="acc-inp email" type="email" name="email" required/>
+        </div>:""
         }
         </div>
         <button onClick={()=>setLoginClicked(!loginClicked)}>login</button>
     </div>);
 }
-export default Account;
+export default Seller_login;

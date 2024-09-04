@@ -19,7 +19,7 @@ function Header(){
         </div>
         <div className="bar3">
             <img src="../images/profile.png" className="profile"></img>
-            <div className="name" onClick={()=>setprofileClicked(!profileClicked)}>{(profileClicked)?<Navigate to="/Login"></Navigate>:"login"}</div>
+            <div className="name" onClick={()=>setprofileClicked(!profileClicked)}>{(profileClicked)?<Navigate to="/Login_createuser"></Navigate>:"login"}</div>
         </div>
     </div>
     </div>

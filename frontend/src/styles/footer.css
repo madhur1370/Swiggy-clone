@@ -10,6 +10,7 @@
     padding: 15px;
     height: 200px;
     display: flex;
+    flex-direction: row;
 }
 .c1{
     font-size: x-larger;
@@ -60,3 +61,16 @@
     width: 50px;
 }
 
+.seller{
+    position: absolute;
+    right:0;
+    margin-right: 5%;
+}
+
+
+@media (max-width:700px)
+{
+    .footer{
+        flex-direction: column;
+    }
+}
