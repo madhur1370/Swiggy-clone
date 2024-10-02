@@ -21,6 +21,14 @@
 }
 .imenu{
     width: 130px;
+    text-align: center;
+    justify-content: center;
     cursor: pointer;
     padding: 2px;
+}
+@media (max-width:750px) {
+    .imenu{
+        height:130px;
+        width: 100px;
+    }    
 }

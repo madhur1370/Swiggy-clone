@@ -1,15 +1,15 @@
-.mainblock{
+.mainpart{
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction:row;
+    min-height: fit-content;
 }
 .title2{
     color: white;
     font-weight:900;
     font-size:5vw;
     text-align: center;
-    margin-top: 20%;
 }
 .buttons{
     display: flex;
@@ -21,7 +21,7 @@
     margin-top: 5%;
 }
 
-.leftblock{
+.leftpart{
     width:40vh;
     height: 40vh;
     min-height: 250px;
@@ -33,10 +33,11 @@
     margin-bottom: auto;
 
 }
-.rightblock{
+.rightpart{
     background-color: coral;
     height: 100vh;
     width:60%;
+    min-height: fit-content;
 }
 .button{
     background-color: white;
@@ -48,6 +49,7 @@
     font-weight: bolder;
     border-radius: 10px;
     margin: auto;
+    cursor: pointer;
 }
 
 
@@ -58,15 +60,24 @@
     .title2{
         font-size:8vw;
     }
-    .mainblock{
+    .mainpart{
         flex-direction: column;
     }
-    .rightblock{
+    .rightpart{
         width: 100%;
         height: 100%;
+        padding-bottom: 10px;
     }
-    .leftblock{
+    .leftpart{
         width: 250px;
         height: 250px;
+    }
+}
+@media (max-height:400px) {
+    .leftpart{
+        display: none;
+    }
+    .rightpart{
+        width: 100%;
     }
 }

@@ -16,8 +16,7 @@ function Home(){
             <Footer></Footer>
             
         </div>
-        </Logincontextprovider>
-    );
+        </Logincontextprovider>);
 }
 
 export default Home;

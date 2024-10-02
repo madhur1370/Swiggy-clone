@@ -1,0 +1,27 @@
+.cartcontainer{
+    width: 50%;
+    cursor: pointer;
+    min-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 200px 150px 70px 250px;
+
+}
+.quant1,.quant2{
+    color: black;
+    margin: auto;
+}
+
+.cont{
+    background-color: crimson;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}
+.cont>img{
+    width: 250px;
+    height: 155px;
+    border-radius: 10px;
+}

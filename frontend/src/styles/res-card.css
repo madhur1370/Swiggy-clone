@@ -102,3 +102,16 @@
     gap: 3px;
     border-radius: 10%;
 }
+
+@media (max-width:850px) {
+
+    .res-image{
+        width: 300px;
+        height: 200px;
+    }
+    .main-cont{
+        width: 310px;
+        height: 310px;
+    }
+
+}

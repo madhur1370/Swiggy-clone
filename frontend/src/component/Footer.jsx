@@ -25,7 +25,7 @@ function Footer(){
             </Link>
         </div>
         </div>
-        <div className="seller">AS A SELLLER<Link to={"/bussiness_owner/"}><br/>Login</Link></div>
+        <div className="seller">AS A SELLLER<Link to={"/seller"}><br/>Login</Link></div>
     </div>);
 }
 export default Footer

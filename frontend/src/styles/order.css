@@ -1,0 +1,14 @@
+.orderitem>li{
+    margin: 15px;
+    color: black;
+    background-color: aquamarine;
+}
+
+.orderitem{
+    background-color: cornflowerblue;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content:space-around;
+}
+

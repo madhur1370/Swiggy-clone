@@ -61,8 +61,11 @@
 }
 
 .logo-text{
-    height: 100%;
-    font-size:200%;
+    height:100%;
+    padding-right: 3px;
+    font-size: 200%;
+    overflow-y: hidden;
+    align-content: center;
     font-family: cursive;
 
 }
@@ -84,7 +87,7 @@
     align-self: center;
 }
 
-.name{
+.userprofile{
     cursor: pointer;
 }
 

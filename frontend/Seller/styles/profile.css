@@ -1,0 +1,25 @@
+#editprofile{
+    position: absolute;
+    width: 55vw;
+    left: 0;
+    top:100px;
+    right: 0;
+    margin: 0 auto;
+    height: calc(100vh - 50px);
+    background-color: rgb(255, 255, 255);
+}
+
+
+.field{
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top: 15px;
+    width: 75%;
+    height: 50px;
+    background-color: rgb(255, 170, 139);
+    font-weight: bolder;
+    align-content: center;
+    padding-left: 5%;
+    display: flex;
+    align-self: center;
+}
