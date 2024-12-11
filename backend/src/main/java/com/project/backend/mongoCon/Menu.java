@@ -10,7 +10,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Menu {
-    private  String dishname;
+    private  String dish_name;
     private  Integer price;
     private  List<Integer> rating;
     private  String image;
