@@ -2,6 +2,8 @@ import SellerHeader from "./SellerHeadder";
 import "../styles/dashboard.css";
 import {useEffect, useState } from "react";
 import Profile from "./Profile";
+
+let array=[];
 function Dashboard(){
     
     let [data,setdata]=useState({});
@@ -47,9 +49,9 @@ function Dashboard(){
         setclicked(!profileclicked)
     }
 
-
+    array=data.menu||[];
     useEffect(()=>{
-        fetch("http://localhost:8181/user/api/restaurants/?location=Jaipur")
+        fetch("https://localhost:8181/user/api/restaurants?location=Jaipur")
         .then((res)=>res.json())
         .then((d)=>{
             let a=d[0].restaurants;
@@ -64,7 +66,6 @@ function Dashboard(){
                 
             }
         })
-        .catch(console.log("error fetching bussiness owner details!!!"))
     },[])
     return(<div className="mainblock">
         <SellerHeader message={func}/>
@@ -91,37 +92,13 @@ function Dashboard(){
                 </div>
             </div>:""}
 
-            <div className="resabout" style={{marginTop:"20px",height:"fit-content",fontSize:"100%",fontWeight:"500"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse impedit fugit quis dolorem dolores beatae aut quia. Quos dolor molestiae odio qui reprehenderit omnis dicta incidunt nostrum, earum, voluptate eos!
-            Tempora assumenda hic placeat in, dolores doloremque et veritatis dolorem iste distinctio aliquam necessitatibus minus cum eligendi praesentium similique neque saepe, non qui, quos ratione dolorum reiciendis cupiditate sequi. Dolor.
-            Aut vero iusto exercitationem nihil, error voluptatum deleniti tempora dolore similique? Maiores molestias excepturi atque labore beatae tenetur alias, autem corrupti molestiae, quibusdam recusandae numquam suscipit odit porro incidunt maxime!
-            Voluptatibus tempore eos doloribus rerum aperiam at iure deserunt quo repellendus doloremque fuga quae ratione dicta voluptate, temporibus, vitae obcaecati nobis dolorem numquam aliquam quam alias natus eligendi similique. Rerum.
-            Repellat, odio quisquam? Neque aspernatur rerum cupiditate numquam excepturi quidem ducimus sed cumque sit. Placeat saepe odio quis repellendus cum iusto eligendi numquam asperiores. Tempore porro voluptatum dolores obcaecati necessitatibus?
-            Eius cumque fugiat laudantium magnam debitis quod impedit tempore ipsam perferendis velit ratione, vel ea recusandae fugit beatae ex dignissimos accusamus! Expedita reiciendis perferendis dolor, omnis suscipit qui pariatur facilis.
-            Odit quidem atque repudiandae pariatur. Labore voluptatibus inventore maxime amet dolorem consectetur necessitatibus fuga soluta officia. Suscipit accusantium cum tenetur voluptas ratione natus nemo necessitatibus ad. Pariatur autem repellendus minus!
-            Minus fugiat at illum aspernatur delectus voluptas officiis totam ex quasi iste error, ipsam nihil ea quaerat eveniet ipsa voluptates eaque aliquid fugit eligendi quae laboriosam non optio. Totam, eum.
-            Dignissimos optio quo cumque quae iusto voluptatem unde blanditiis quia facere, tempora aliquid earum obcaecati repellendus, exercitationem eius doloremque dolore reprehenderit rem officia recusandae sint dicta aliquam. Dolorem, culpa eius.
-            Quam enim, maxime, optio assumenda alias quod nisi nesciunt ipsum dignissimos excepturi saepe repudiandae laboriosam aut dolorum ad in facilis odit quidem velit molestias beatae sed itaque possimus repellat. Architecto!
-            Maxime, nobis? Quia placeat molestiae temporibus sit obcaecati ad aliquid labore, tempora fugit reprehenderit, natus iusto consequuntur nemo modi esse voluptatum a aut nam. Tenetur assumenda sapiente reprehenderit dolorem atque.
-            Aliquam tempore cupiditate facere, soluta commodi nihil quod inventore a tempora reprehenderit sed provident harum iure dolores. Id, praesentium officiis? Aut, voluptatem quidem repellendus officia dolorem architecto sapiente tempora sequi?
-            Ut corrupti saepe eveniet exercitationem, non, est laudantium, possimus unde sapiente magnam quasi. Reiciendis quis pariatur quam tempore, ea, culpa nesciunt ab laboriosam provident officiis nihil iusto corrupti velit nemo!
-            Id at quo provident praesentium quos vero error sed optio consequatur tempora maxime nemo quis ab laboriosam fugit aperiam voluptatum dolor, ducimus eligendi similique pariatur deserunt laborum iusto eveniet! Nulla.
-            Laborum ipsa commodi quas earum dolore natus ipsum voluptatem officia libero? Esse porro in vitae earum vel nemo sit alias laborum ducimus quaerat quisquam, est laudantium ipsam quis fugiat maiores?
-            Accusantium aperiam totam optio dolores voluptatum corporis, incidunt rerum nostrum veritatis eum aut ab. Nulla nesciunt officia dignissimos ducimus pariatur, beatae voluptatibus harum consectetur atque suscipit in cum provident reiciendis.
-            Dolor architecto molestiae ex necessitatibus deserunt laboriosam aspernatur vero quisquam fugit, sunt iusto omnis earum eius maiores voluptatibus repellat a nemo iste libero dolorem veritatis dicta. Laboriosam deserunt maxime earum!
-            Nemo aliquid itaque incidunt accusamus dolores suscipit possimus reprehenderit, quibusdam ducimus dolorum fuga accusantium nisi animi eveniet corrupti unde numquam, eum maiores vero? Aliquid temporibus iusto magnam cupiditate nisi pariatur.
-            Dolorum sunt voluptatibus praesentium nemo animi quisquam accusantium mollitia aspernatur commodi eaque eveniet velit temporibus omnis, illo, tempore doloremque? Itaque reprehenderit ipsum earum culpa similique voluptas natus quae eos molestiae.
-            Nulla nostrum alias autem quidem porro. Doloremque qui ipsum suscipit reiciendis optio numquam possimus eaque harum consectetur quia reprehenderit officia, totam explicabo illo facere blanditiis minus natus vel magnam nemo.
-            Saepe sapiente reprehenderit perferendis ex cum sunt modi! Aliquid iste, eos odit vel voluptate facere voluptatibus voluptatum. Nam doloribus esse dolorum quis quasi commodi, deserunt vel, sapiente voluptates maiores repellat!
-            Dolores necessitatibus tempore nulla pariatur sunt laudantium assumenda velit deleniti, suscipit sequi quia ratione iure quidem doloremque quos molestias odio! Ipsum maiores corporis veniam, labore consequatur blanditiis illum exercitationem tempore?
-            Fugit quam dolorem suscipit similique perspiciatis provident blanditiis, distinctio est reiciendis libero dolore a nihil veniam illo corporis quo harum mollitia facere ut, laborum nulla eligendi omnis. Porro, perspiciatis doloremque.
-            Dolorem distinctio at rerum labore quaerat impedit vel similique officiis aspernatur? Deleniti reprehenderit possimus ratione rerum, vitae deserunt explicabo dicta architecto beatae illo reiciendis pariatur laboriosam et. Similique, praesentium quasi?
-            Officiis saepe quos quisquam reprehenderit. Voluptate temporibus sed consequatur in, excepturi quis inventore perferendis maxime soluta placeat quam corrupti accusamus quidem delectus modi eos numquam atque nam laboriosam similique repellendus.
-            Ex eum aliquid delectus deleniti corrupti sequi velit voluptates porro provident hic officiis, quidem mollitia, ad minus dolorem fugit ipsa quasi soluta harum ducimus reprehenderit recusandae. Dolores officiis temporibus beatae.
-            Tenetur ipsam at, eum pariatur quis dolores possimus porro corrupti quo! Ratione adipisci natus ipsam. Nesciunt voluptatum, qui hic quia nam animi ipsam incidunt non, quidem omnis quaerat, accusantium fugit?
-            Expedita dolor voluptatem tempore reprehenderit vel. Ratione reprehenderit exercitationem sequi. Architecto minus tenetur provident impedit ipsum, fugit deserunt odio commodi neque quaerat, iure esse officiis sapiente. Obcaecati ab temporibus iusto?
-            Possimus, dignissimos? Temporibus nesciunt odit neque, illum maxime facilis perspiciatis dolor blanditiis officia, esse nulla dicta vitae quia sed beatae voluptatem quae recusandae consequatur dolore totam minima praesentium perferendis! Voluptatibus.
-            Blanditiis, inventore! Recusandae veritatis adipisci, voluptatibus fuga odit laudantium aut dolore, ad atque, ut dolorum quibusdam doloribus doloremque corporis ducimus eum perferendis voluptatem minima. Possimus veniam facilis ex! Quidem, reiciendis.</div>
+            <div className="resabout" style={{marginTop:"20px",height:"fit-content",fontSize:"120%",fontWeight:"700" ,fontFamily:"cursive"}}>Welcome to Mahapadam, a premier destination for food lovers in the heart of Lucknow. Known for its blend of traditional Awadhi flavors and contemporary dining experiences, Mahapadam brings you a culinary journey that celebrates the rich cultural heritage of Lucknow.
+
+Our chefs craft each dish with the finest ingredients, ensuring an unforgettable dining experience. From the famous Lucknowi kebabs to aromatic biryanis and delicious Mughlai curries, our menu is designed to please both locals and visitors alike.
+
+At Mahapadam, we believe in offering not just a meal but an experience. Our elegant interiors, coupled with warm hospitality, make us the perfect spot for family dinners, corporate gatherings, or a quiet evening out. We take pride in maintaining the highest standards of service and food quality.</div>
         </div>
+
         </div>
     </div>)
 }

@@ -1,100 +1,66 @@
 .bar{
-    z-index: 1;
-}
-
-.bar,.bar1,.bar2,.bar3{
-    width: 100vw;
-    height:50px;
-    background-color:rgb(230, 139, 54);
-    display: flex;
-    font-size:large;
-    color: white;
-    font-weight: bolder;
-    justify-content:space-between;
-    gap:10px;
-}
-
-.bar1{
-    justify-content: left;
-    width: 280px;
-}
-.bar1>.logo{
     height: 50px;
-    width: 50px;
-    align-self: center;
-}
-.bar2{
-    width:100%;
-    justify-content:right;
-}
-.bar2>div,.home{
-    font-size: large;
-    align-self: center;
-    margin-right:1vw;
-    cursor: pointer;
-}
-.bar2>img{
-    cursor: pointer;
-}
-
-.bar3{
-    width: 150px;
+    width: 100vw;
+    background-color: coral;
     display: flex;
-    justify-content: right;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-}
-.bar3>img{
-    height: fit-content;
-    width: fit-content;
-    align-self: center;
-}
-.bar3>div{
-    padding-right: 3px;
-    width: fit-content;
+.bar1,.search,.bar2,.bar3{
+    display: flex;
+    flex-direction: row;
     align-content: center;
+    align-items: center;
+    font-weight: 900;
 }
+
 
 .logo{
     border-radius: 50%;
-    border:2px solid white;
-    margin-right:7px;
+    height: 50px;
+    width: 50px;
+}
+.logotext{
+    color: white;
+    font-family:cursive;
+    font-weight: 600;
+    font-size: 250%;
+    margin-left: 5px;
 }
 
-.logo-text{
-    height:100%;
-    padding-right: 3px;
-    font-size: 200%;
-    overflow-y: hidden;
-    align-content: center;
-    font-family: cursive;
+.bar1{
+    margin-left: 20px;
+    overflow: hidden;
+}
 
+.search>img,.bar2>img,.bar3>img{
+    width: 25px;
+    height: 25px;
+}
+
+.bar2{
+    gap: 15px;
+}
+
+.bar3{
+    margin-right: 10px;
 }
 
 
-
-.menu{
-    width:25px;
-}
-
-@media(max-width:750px){
+@media (max-width:850px) {
     .bar2{
         display: none;
     }
-}
-.bar2>img{
-    height: 20px;
-    width: 20px;
-    align-self: center;
+    
 }
 
-.userprofile{
+
+.search>input{
+    height: 90%;
+    color: black;
+    font-weight: 300;
+}
+.search>img{
     cursor: pointer;
-}
-
-.login{
-    background-color: black;
-    height: 100%;
-}
-.cart{
-    align-self: center;
 }

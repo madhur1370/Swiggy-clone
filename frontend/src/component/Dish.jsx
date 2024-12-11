@@ -69,9 +69,8 @@ function Dish(props) {
           <button
             className="addbutton"
             onClick={() => {
-              // If username is not in session storage, redirect to login page
               if (!sessionStorage.username) {
-                window.location.href = "/Login_createuser"; // Corrected assignment
+                window.location.href = "/user/login"; 
               }
               else if (item === 0) {
                 setitem(1);

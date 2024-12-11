@@ -1,10 +1,15 @@
 import {useState ,useContext} from "react";
 import "../styles/account.css"
 import LoginContext from "../context/context";
-import { Navigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 const Account=()=>{
     const {Islogin,setIslogin}=useContext(LoginContext);
-    const Loginclicked=function (e){
+    const navigate=useNavigate()
+    function goback(){
+        navigate(-1);
+    }
+
+    const Loginclicked=function (){
             let username=document.querySelector(".username").value;
             let password=document.querySelector(".password").value;
             if(username==""||password=="")
@@ -37,11 +42,10 @@ const Account=()=>{
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(content)
             }
-            let url="http://127.0.0.1:8181"+reqtype;
+            let url="https://localhost:8181"+reqtype;
             fetch(url,obj)
             .then((res)=>res.json())
             .then((data)=>{
-                console.log(data)
                 if(data.response=="ok")
                 {
                     sessionStorage.setItem("username",username);
@@ -77,7 +81,7 @@ const Account=()=>{
                }
             }}>create account</div>
         </div>
-        <div   className="mid-sec">
+        <div  className="mid-sec">
         <label className="acc-label" htmlFor="username">username</label>
         <input className="acc-inp username" type="text"  name="username" maxLength={20} required/>
         <label className="acc-label" htmlFor="password">password</label>
@@ -86,12 +90,13 @@ const Account=()=>{
         <label className="acc-label" htmlFor="name">name</label>
         <input className="acc-inp name" type="text" name="name" required/>
         <label className="acc-label" htmlFor="phone">phone</label>
-        <input className="acc-inp phone" type="number" name="phone" maxLength={10} minLength={10} required/>
+        <input className="acc-inp phone" type="tel" name="phone" maxLength={10} minLength={10} required/>
         <label className="acc-label" htmlFor="email">email</label>
         <input className="acc-inp email" type="email" name="email" required/></div>:""
         }
+        <button className="subbut" onClick={()=>{Loginclicked()}}>{(switchlogin_create)?"create":"login"}</button>
         </div>
-        {(!Islogin)?<button onClick={()=>{Loginclicked()}}>{(switchlogin_create)?"create":"login"}</button>:<Navigate to={"/"}/>}
+        {(Islogin)?goback():""}
     </div>);
 }
 export default Account;

@@ -42,7 +42,7 @@ const Profile=(props)=>{
             body:JSON.stringify(body)
         }
 
-        fetch("http://localhost:8181/seller/editprofile",content)
+        fetch("https://localhost:8181/seller/editprofile",content)
         .then((res)=>res.json())
         .then((d)=>{
                 alert(d.response);

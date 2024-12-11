@@ -33,7 +33,7 @@ const Res_card = (props) => {
     let data=props.name
     data["location"]=props.loc
     return (
-        <Link className="main-cont" to={"/restaurant/info"} state={data} >
+        <Link className="main-cont" to={"user/restaurant/info"} state={data} >
             <img 
                 src={props.name.res_image[3]}
                 className="res-image" 

@@ -24,17 +24,22 @@ const route=createBrowserRouter([
     },
     {
 
-        path:"/login/register/" ,
+        path:"/seller/register" ,
         element:<Seller_login/>
     },
     {
 
-        path:"seller/dashboard" ,
+        path:"/seller/login" ,
+        element:<Seller_login/>
+    },
+    {
+
+        path:"/seller/dashboard" ,
         element:<Dashboard/>
     },
     {
 
-        path:"/user/restaurantinfo" ,
+        path:"/user/restaurant/info" ,
         element:<RestaurantProfile/>
     },
     {

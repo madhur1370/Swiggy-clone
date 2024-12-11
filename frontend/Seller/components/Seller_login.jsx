@@ -36,7 +36,7 @@ const Seller_login=()=>{
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(content)
         }
-        let url="http://127.0.0.1:8181"+reqtype;
+        let url="https://127.0.0.1:8181"+reqtype;
         console.log(url)
         fetch(url,obj)
         .then((res)=>res.json())
